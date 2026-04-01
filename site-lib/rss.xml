@@ -1,98 +1,218 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[OpenCode]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>OpenCode</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 01 Apr 2026 12:48:56 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 01 Apr 2026 12:48:56 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Métodos JavaScript para Aulas]]></title><description><![CDATA[Abstract
-Esta nota reúne métodos e recursos do JavaScript que podem ser ensinados do nível básico ao avançado.
-Cada item traz explicação, exemplo e um ponto de atenção para facilitar o uso em aula. <a data-href="#Básico" href="metodos-javascript-para-aulas.html#Básico_0" class="internal-link" target="_self" rel="noopener nofollow">Básico</a>
-<br><a data-href="#Intermediário" href="metodos-javascript-para-aulas.html#Intermediário_0" class="internal-link" target="_self" rel="noopener nofollow">Intermediário</a>
-<br><a data-href="#Avançado" href="metodos-javascript-para-aulas.html#Avançado_0" class="internal-link" target="_self" rel="noopener nofollow">Avançado</a>
-<br><a data-href="#Sugestão de Ordem para Aula" href="metodos-javascript-para-aulas.html#Sugestão_de_Ordem_para_Aula_0" class="internal-link" target="_self" rel="noopener nofollow">Sugestão de Ordem para Aula</a>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[OpenCode]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>OpenCode</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 01 Apr 2026 13:31:03 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 01 Apr 2026 13:31:03 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[Dicas para o Dia a Dia com Métodos JavaScript]]></title><description><![CDATA[Abstract
+Esta nota reúne métodos e recursos de JavaScript que aparecem com frequência no dia a dia.
+A proposta é ensinar do básico ao avançado com linguagem clara, direta e progressiva.
+Cada método inclui explicação e 3 exemplos de uso. <a data-href="#Básico" href="dicas-para-o-dia-a-dia.html#Básico_0" class="internal-link" target="_self" rel="noopener nofollow">Básico</a>
+<br><a data-href="#Intermediário" href="dicas-para-o-dia-a-dia.html#Intermediário_0" class="internal-link" target="_self" rel="noopener nofollow">Intermediário</a>
+<br><a data-href="#Avançado" href="dicas-para-o-dia-a-dia.html#Avançado_0" class="internal-link" target="_self" rel="noopener nofollow">Avançado</a>
+<br><a data-href="#Como Estudar Esta Nota" href="dicas-para-o-dia-a-dia.html#Como_Estudar_Esta_Nota_0" class="internal-link" target="_self" rel="noopener nofollow">Como Estudar Esta Nota</a>
 Info
-Nesta etapa, o foco é mostrar métodos simples, leitura de código e transformação direta de dados.
-O que faz: transforma uma string em letras maiúsculas.const texto = "javascript";
-console.log(texto.toUpperCase()); // JAVASCRIPT
-Quando ensinar: ao introduzir string e manipulação de texto.Explicação: esse método retorna uma nova string. Ele não altera a string original.O que faz: transforma uma string em letras minúsculas.const texto = "JaVaScRiPt";
+Nesta fase, a ideia é entender métodos que ajudam a lidar com textos, listas e verificações simples.
+O que faz: transforma um texto em letras maiúsculas.Como entender: imagine que você quer destacar uma palavra, como se estivesse escrevendo um aviso. Esse método faz esse destaque convertendo tudo para caixa alta.Explicação: ele retorna uma nova string. O valor original continua igual, a menos que você salve o resultado em outra variável.Exemplo 1const nome = "ana";
+console.log(nome.toUpperCase()); // ANA
+Exemplo 2const aviso = "promoção";
+console.log(aviso.toUpperCase()); // PROMOÇÃO
+Exemplo 3const cidade = "Recife";
+const destaque = cidade.toUpperCase();
+console.log(destaque); // RECIFE
+O que faz: transforma um texto em letras minúsculas.Como entender: é útil quando textos chegam misturados, com maiúsculas e minúsculas, e você quer padronizar antes de comparar.Explicação: também retorna uma nova string, sem mudar a original.Exemplo 1const texto = "JAVASCRIPT";
 console.log(texto.toLowerCase()); // javascript
-Explicação: é muito usado para padronizar valores antes de comparar textos.O que faz: remove espaços em branco do início e do fim de uma string.const nome = " Maria ";
-console.log(nome.trim()); // Maria
-Explicação: útil quando o aluno começa a trabalhar com formulários e entradas de usuário.O que faz: verifica se um texto ou array contém determinado valor.const frase = "Eu estudo JavaScript";
+Exemplo 2const email = "USUARIO@SITE.COM";
+console.log(email.toLowerCase()); // usuario@site.com
+Exemplo 3const resposta = "Sim";
+console.log(resposta.toLowerCase() === "sim"); // true
+O que faz: remove espaços do começo e do fim de um texto.Como entender: às vezes o valor parece certo, mas vem com espaços escondidos. Esse método limpa a borda do texto.Explicação: ele não remove espaços do meio da frase. Apenas das extremidades.Exemplo 1const nome = " Carlos ";
+console.log(nome.trim()); // Carlos
+Exemplo 2const senha = " 123456 ";
+console.log(senha.trim()); // 123456
+Exemplo 3const entrada = " ok";
+console.log(entrada.trim() === "ok"); // true
+O que faz: verifica se um texto ou array contém um valor.Como entender: pense nele como uma pergunta direta: "isso está aqui dentro?".Explicação: o retorno sempre será true ou false.Exemplo 1const frase = "Estou aprendendo JavaScript";
 console.log(frase.includes("JavaScript")); // true
-Explicação: retorna true ou false. É um bom ponto para reforçar o conceito de valor booleano.O que faz: recorta parte de uma string ou array.const palavra = "Programacao";
-console.log(palavra.slice(0, 4)); // Prog
-Explicação: recebe índice inicial e final. O índice final não é incluído no resultado.O que faz: adiciona um item ao final de um array.const frutas = ["maça", "banana"];
-frutas.push("uva");
-console.log(frutas); // ["maça", "banana", "uva"]
-Explicação: diferente dos métodos de string, ele altera o array original.O que faz: remove o último item de um array.const numeros = [10, 20, 30];
+Exemplo 2const frutas = ["maçã", "banana", "uva"];
+console.log(frutas.includes("banana")); // true
+Exemplo 3const senha = "abc123";
+console.log(senha.includes("@")); // false
+O que faz: recorta uma parte de uma string ou array.Como entender: é como pegar apenas um pedaço de algo maior, sem mexer no todo.Explicação: você informa o ponto inicial e, opcionalmente, o final. O final não entra no resultado.Exemplo 1const palavra = "computador";
+console.log(palavra.slice(0, 4)); // comp
+Exemplo 2const numeros = [10, 20, 30, 40, 50];
+console.log(numeros.slice(1, 3)); // [20, 30]
+Exemplo 3const codigo = "ABC-1234";
+console.log(codigo.slice(4)); // 1234
+O que faz: adiciona um item no final do array.Como entender: imagine uma fila em que um novo elemento entra no fim.Explicação: esse método altera o array original.Exemplo 1const lista = [1, 2, 3];
+lista.push(4);
+console.log(lista); // [1, 2, 3, 4]
+Exemplo 2const nomes = ["Ana", "Bruno"];
+nomes.push("Carla");
+console.log(nomes); // ["Ana", "Bruno", "Carla"]
+Exemplo 3const tarefas = [];
+tarefas.push("estudar");
+console.log(tarefas); // ["estudar"]
+O que faz: remove o último item do array.Como entender: se push() coloca no fim, pop() tira do fim.Explicação: ele altera o array e ainda devolve o item removido.Exemplo 1const numeros = [1, 2, 3];
 numeros.pop();
-console.log(numeros); // [10, 20]
-Explicação: é útil para ensinar que alguns métodos modificam a estrutura original.O que faz: remove o primeiro item de um array.const fila = ["Ana", "Bruno", "Carlos"];
-fila.shift();
-console.log(fila); // ["Bruno", "Carlos"]
-Explicação: funciona bem para explicar comportamento de fila.O que faz: adiciona item no início de um array.const fila = ["Bruno", "Carlos"];
-fila.unshift("Ana");
-console.log(fila); // ["Ana", "Bruno", "Carlos"]
-Explicação: ajuda a contrastar com push().O que faz: retorna a posição de um item em uma string ou array.const cores = ["azul", "verde", "vermelho"];
-console.log(cores.indexOf("verde")); // 1
-Explicação: se o valor não existir, o retorno será -1.Tip
-Aqui entram métodos muito usados em projetos reais, principalmente com arrays, objetos e funções.
-O que faz: percorre todos os itens de um array.const nomes = ["Ana", "Bruno", "Carlos"]; nomes.forEach((nome) =&gt; { console.log(nome);
+console.log(numeros); // [1, 2]
+Exemplo 2const frutas = ["maçã", "banana", "uva"];
+const removida = frutas.pop();
+console.log(removida); // uva
+Exemplo 3const historico = ["inicio", "meio", "fim"];
+historico.pop();
+console.log(historico); // ["inicio", "meio"]
+O que faz: encontra a posição de um item.Como entender: ajuda a responder "em que lugar isso está?".Explicação: se não encontrar o valor, retorna -1.Exemplo 1const letras = ["a", "b", "c"];
+console.log(letras.indexOf("b")); // 1
+Exemplo 2const palavra = "javascript";
+console.log(palavra.indexOf("s")); // 4
+Exemplo 3const cores = ["azul", "verde"];
+console.log(cores.indexOf("vermelho")); // -1
+Tip
+Aqui entram os métodos mais usados no trabalho com listas de dados, cadastros, filtros e transformações.
+O que faz: percorre todos os itens de um array.Como entender: ele olha item por item, como se você passasse por cada elemento de uma lista manualmente.Explicação: é bom para executar ações, mas não cria um novo array.Exemplo 1const nomes = ["Ana", "Bruno", "Carla"]; nomes.forEach((nome) =&gt; { console.log(nome);
 });
-Explicação: é bom para mostrar repetição com sintaxe moderna. Ele não retorna um novo array.O que faz: cria um novo array transformando cada item do array original.const numeros = [1, 2, 3];
-const dobrados = numeros.map((numero) =&gt; numero * 2); console.log(dobrados); // [2, 4, 6]
-Explicação: ideal para ensinar transformação de dados sem alterar a lista original.O que faz: cria um novo array apenas com os elementos que passam em uma condição.const idades = [12, 18, 25, 15, 30];
-const maioresDeIdade = idades.filter((idade) =&gt; idade &gt;= 18); console.log(maioresDeIdade); // [18, 25, 30]
-Explicação: excelente para trabalhar regras de seleção.O que faz: retorna o primeiro elemento que atende a uma condição.const alunos = [ { nome: "Ana", nota: 7 }, { nome: "Bruno", nota: 9 },
-]; const aluno = alunos.find((item) =&gt; item.nota &gt; 8);
-console.log(aluno); // { nome: "Bruno", nota: 9 }
-Explicação: diferente de filter(), ele retorna apenas um item, não um novo array com vários.O que faz: verifica se pelo menos um item do array atende a uma condição.const numeros = [1, 3, 5, 8];
+Exemplo 2const numeros = [1, 2, 3]; numeros.forEach((numero) =&gt; { console.log(numero * 2);
+});
+Exemplo 3const compras = ["arroz", "feijão", "café"]; compras.forEach((item, indice) =&gt; { console.log(indice, item);
+});
+O que faz: cria um novo array transformando cada elemento.Como entender: você pega uma lista e devolve outra lista com os itens modificados.Explicação: é um dos métodos mais importantes para trabalhar com dados sem alterar a estrutura original.Exemplo 1const numeros = [1, 2, 3];
+const dobrados = numeros.map((n) =&gt; n * 2); console.log(dobrados); // [2, 4, 6]
+Exemplo 2const nomes = ["ana", "bruno"];
+const emMaiusculo = nomes.map((nome) =&gt; nome.toUpperCase()); console.log(emMaiusculo); // ["ANA", "BRUNO"]
+Exemplo 3const precos = [10, 20, 30];
+const comDesconto = precos.map((preco) =&gt; preco * 0.9); console.log(comDesconto); // [9, 18, 27]
+O que faz: cria um novo array com itens que passam em uma condição.Como entender: pense como uma peneira. O que atende à regra passa, o resto fica de fora.Explicação: muito útil para buscas e seleções.Exemplo 1const idades = [12, 18, 25, 15];
+const maiores = idades.filter((idade) =&gt; idade &gt;= 18); console.log(maiores); // [18, 25]
+Exemplo 2const produtos = ["mouse", "teclado", "monitor"];
+const comM = produtos.filter((produto) =&gt; produto.includes("m")); console.log(comM); // ["mouse", "monitor"]
+Exemplo 3const numeros = [1, 2, 3, 4, 5, 6];
+const pares = numeros.filter((numero) =&gt; numero % 2 === 0); console.log(pares); // [2, 4, 6]
+O que faz: encontra o primeiro item que atende a uma condição.Como entender: ele procura até achar o primeiro resultado válido e então para.Explicação: se nada for encontrado, o retorno é undefined.Exemplo 1const numeros = [4, 7, 10, 13];
+const primeiroPar = numeros.find((numero) =&gt; numero % 2 === 0); console.log(primeiroPar); // 4
+Exemplo 2const usuarios = [ { nome: "Ana", ativo: false }, { nome: "Bruno", ativo: true },
+]; const usuarioAtivo = usuarios.find((usuario) =&gt; usuario.ativo);
+console.log(usuarioAtivo); // { nome: "Bruno", ativo: true }
+Exemplo 3const frutas = ["maçã", "banana", "uva"];
+const resultado = frutas.find((fruta) =&gt; fruta === "pera"); console.log(resultado); // undefined
+O que faz: verifica se pelo menos um item atende à condição.Como entender: é como perguntar: "existe ao menos um caso assim?".Explicação: retorna true ou false.Exemplo 1const numeros = [1, 3, 5, 8];
 console.log(numeros.some((n) =&gt; n % 2 === 0)); // true
-Explicação: muito útil para validações rápidas.O que faz: verifica se todos os itens atendem a uma condição.const notas = [8, 9, 10];
+Exemplo 2const usuarios = [ { nome: "Ana", admin: false }, { nome: "Bruno", admin: true },
+]; console.log(usuarios.some((usuario) =&gt; usuario.admin)); // true
+Exemplo 3const notas = [4, 5, 6];
+console.log(notas.some((nota) =&gt; nota &gt;= 7)); // false
+O que faz: verifica se todos os itens atendem à condição.Como entender: aqui a pergunta muda para: "todos passam nessa regra?".Explicação: também retorna true ou false.Exemplo 1const notas = [8, 9, 10];
 console.log(notas.every((nota) =&gt; nota &gt;= 7)); // true
-Explicação: ajuda a reforçar raciocínio lógico com arrays.O que faz: reduz um array a um único valor.const valores = [10, 20, 30];
-const total = valores.reduce((acumulador, valor) =&gt; acumulador + valor, 0); console.log(total); // 60
-Explicação: pode ser usado para somar, contar, agrupar e transformar estruturas de dados.O que faz: ordena os elementos de um array.const numeros = [30, 5, 100, 20];
+Exemplo 2const palavras = ["sol", "mar", "ceu"];
+console.log(palavras.every((palavra) =&gt; palavra.length === 3)); // true
+Exemplo 3const numeros = [2, 4, 5, 8];
+console.log(numeros.every((numero) =&gt; numero % 2 === 0)); // false
+O que faz: transforma vários itens em um único resultado.Como entender: imagine juntar várias pequenas partes para formar um total final.Explicação: ele é poderoso porque pode somar, agrupar, contar ou montar novos objetos.Exemplo 1const valores = [10, 20, 30];
+const soma = valores.reduce((acumulador, valor) =&gt; acumulador + valor, 0); console.log(soma); // 60
+Exemplo 2const palavras = ["eu", "gosto", "de", "café"];
+const frase = palavras.reduce((texto, palavra) =&gt; texto + " " + palavra); console.log(frase); // eu gosto de café
+Exemplo 3const numeros = [1, 2, 3, 4];
+const totalPares = numeros.reduce((acumulador, numero) =&gt; { return numero % 2 === 0 ? acumulador + 1 : acumulador;
+}, 0); console.log(totalPares); // 2
+O que faz: ordena os itens de um array.Como entender: é como organizar livros em uma prateleira ou números em ordem crescente.Explicação: com números, o ideal é usar uma função de comparação para evitar resultados inesperados.Exemplo 1const letras = ["c", "a", "b"];
+letras.sort(); console.log(letras); // ["a", "b", "c"]
+Exemplo 2const numeros = [30, 5, 100, 20];
 numeros.sort((a, b) =&gt; a - b); console.log(numeros); // [5, 20, 30, 100]
-Explicação: é importante mostrar que sem a função de comparação, a ordenação pode ser feita como texto.O que faz: retorna um array com as chaves de um objeto.const usuario = { nome: "Ana", idade: 22, cidade: "Recife" };
-console.log(Object.keys(usuario)); // ["nome", "idade", "cidade"]
-Explicação: ótimo para introduzir manipulação de objetos.O que faz: retorna um array com os valores de um objeto.const usuario = { nome: "Ana", idade: 22, cidade: "Recife" };
-console.log(Object.values(usuario)); // ["Ana", 22, "Recife"]
-Explicação: pode ser usado junto com Object.keys() para mostrar a estrutura interna do objeto.O que faz: retorna um array com pares [chave, valor].const usuario = { nome: "Ana", idade: 22 };
-console.log(Object.entries(usuario));
-// [["nome", "Ana"], ["idade", 22]]
-Explicação: muito útil para percorrer objetos com laços e transformar dados.Warning
-Nesta parte, vale trabalhar também contexto de uso, legibilidade e impacto em performance e manutenção.
-O que faz: achata arrays aninhados.const lista = [1, 2, [3, 4], [5, 6]];
-console.log(lista.flat()); // [1, 2, 3, 4, 5, 6]
-Explicação: útil quando os dados vêm organizados em vários níveis.O que faz: combina map() com flat().const frases = ["olá mundo", "javascript é legal"]; const palavras = frases.flatMap((frase) =&gt; frase.split(" "));
-console.log(palavras); // ["olá", "mundo", "javascript", "é", "legal"]
-Explicação: reduz etapas quando você precisa transformar e achatar ao mesmo tempo.O que faz: cria um array a partir de algo parecido com array ou iterável.const texto = "abc";
+Exemplo 3const nomes = ["Carlos", "Ana", "Bruno"];
+nomes.sort(); console.log(nomes); // ["Ana", "Bruno", "Carlos"]
+O que faz: retorna as chaves de um objeto em forma de array.Como entender: mostra os nomes dos campos do objeto.Explicação: é útil quando você quer percorrer ou inspecionar a estrutura do objeto.Exemplo 1const usuario = { nome: "Ana", idade: 30 };
+console.log(Object.keys(usuario)); // ["nome", "idade"]
+Exemplo 2const produto = { titulo: "Livro", preco: 50, estoque: 10 };
+console.log(Object.keys(produto)); // ["titulo", "preco", "estoque"]
+Exemplo 3const configuracao = { tema: "escuro", idioma: "pt-BR" };
+Object.keys(configuracao).forEach((chave) =&gt; { console.log(chave);
+});
+O que faz: retorna os valores de um objeto em forma de array.Como entender: se Object.keys() mostra os nomes, esse mostra o conteúdo guardado nesses nomes.Explicação: ajuda a trabalhar dados de objetos como listas.Exemplo 1const usuario = { nome: "Ana", idade: 30 };
+console.log(Object.values(usuario)); // ["Ana", 30]
+Exemplo 2const notas = { prova1: 8, prova2: 9, prova3: 7 };
+console.log(Object.values(notas)); // [8, 9, 7]
+Exemplo 3const temperaturas = { manha: 22, tarde: 29, noite: 24 };
+const lista = Object.values(temperaturas);
+console.log(lista); // [22, 29, 24]
+Warning
+Aqui aparecem métodos e recursos muito úteis para código moderno, manipulação mais profunda e assincronismo.
+O que faz: achata arrays que têm outros arrays dentro deles.Como entender: em vez de uma lista com sublistas, você transforma tudo em uma lista mais simples.Explicação: ajuda quando os dados chegam agrupados em vários níveis.Exemplo 1const lista = [1, 2, [3, 4]];
+console.log(lista.flat()); // [1, 2, 3, 4]
+Exemplo 2const turmas = [["Ana", "Bruno"], ["Carla", "Diego"]];
+console.log(turmas.flat()); // ["Ana", "Bruno", "Carla", "Diego"]
+Exemplo 3const itens = ["a", ["b", ["c"]]];
+console.log(itens.flat(2)); // ["a", "b", "c"]
+O que faz: transforma e achata ao mesmo tempo.Como entender: primeiro você modifica cada item, depois junta tudo em uma estrutura só.Explicação: evita fazer map() e flat() separadamente em muitos casos.Exemplo 1const frases = ["olá mundo", "bom dia"];
+const palavras = frases.flatMap((frase) =&gt; frase.split(" ")); console.log(palavras); // ["olá", "mundo", "bom", "dia"]
+Exemplo 2const numeros = [1, 2, 3];
+const pares = numeros.flatMap((numero) =&gt; [numero, numero * 2]); console.log(pares); // [1, 2, 2, 4, 3, 6]
+Exemplo 3const categorias = ["frutas,verduras", "bebidas"];
+const itens = categorias.flatMap((grupo) =&gt; grupo.split(",")); console.log(itens); // ["frutas", "verduras", "bebidas"]
+O que faz: cria um array a partir de algo que se comporta como lista.Como entender: pega uma estrutura parecida com coleção e transforma em array de verdade.Explicação: isso permite usar métodos de array em valores que antes não tinham esses métodos.Exemplo 1const texto = "abc";
 console.log(Array.from(texto)); // ["a", "b", "c"]
-Explicação: muito usado com strings, NodeList e estruturas iteráveis.O que faz: cria uma coleção de valores únicos.const numeros = [1, 2, 2, 3, 3, 4];
-const unicos = [...new Set(numeros)]; console.log(unicos); // [1, 2, 3, 4]
-Explicação: é excelente para ensinar remoção de duplicados e introduzir estruturas modernas do JavaScript.O que faz: executa algo depois que uma Promise é resolvida.Promise.resolve("Dados carregados") .then((resultado) =&gt; { console.log(resultado); });
-Explicação: ajuda a introduzir programação assíncrona antes de chegar em async/await.O que faz: trata erros em operações assíncronas.Promise.reject("Erro ao buscar dados") .catch((erro) =&gt; { console.log(erro); });
-Explicação: importante para mostrar que erros assíncronos precisam de tratamento específico.O que faz: executa várias Promises em paralelo e espera todas terminarem.const p1 = Promise.resolve("A");
+Exemplo 2const numeros = Array.from([1, 2, 3], (n) =&gt; n * 10);
+console.log(numeros); // [10, 20, 30]
+Exemplo 3const conjunto = new Set([1, 2, 2, 3]);
+console.log(Array.from(conjunto)); // [1, 2, 3]
+O que faz: armazena valores únicos, sem repetição.Como entender: pense em uma caixa onde o mesmo item só pode entrar uma vez.Explicação: é muito útil para remover duplicados.Exemplo 1const numeros = new Set([1, 2, 2, 3]);
+console.log(numeros); // Set(3) { 1, 2, 3 }
+Exemplo 2const nomes = ["Ana", "Ana", "Bruno"];
+const unicos = [...new Set(nomes)]; console.log(unicos); // ["Ana", "Bruno"]
+Exemplo 3const tags = new Set();
+tags.add("javascript");
+tags.add("javascript");
+tags.add("node"); console.log(tags); // Set(2) { "javascript", "node" }
+O que faz: executa algo depois que uma Promise termina com sucesso.Como entender: é como marcar uma ação para acontecer depois que uma tarefa for concluída.Explicação: muito usado para lidar com resultados assíncronos.Exemplo 1Promise.resolve("carregado").then((resultado) =&gt; { console.log(resultado); // carregado
+});
+Exemplo 2const numero = Promise.resolve(10); numero.then((valor) =&gt; { console.log(valor * 2); // 20
+});
+Exemplo 3Promise.resolve("ana") .then((nome) =&gt; nome.toUpperCase()) .then((nomeFormatado) =&gt; { console.log(nomeFormatado); // ANA });
+O que faz: captura erros de uma Promise.Como entender: se algo deu errado no caminho, esse método entra para tratar a falha.Explicação: é essencial para evitar erros sem tratamento em fluxos assíncronos.Exemplo 1Promise.reject("falha ao carregar") .catch((erro) =&gt; { console.log(erro); // falha ao carregar });
+Exemplo 2Promise.resolve("ok") .then(() =&gt; { throw new Error("erro inesperado"); }) .catch((erro) =&gt; { console.log(erro.message); // erro inesperado });
+Exemplo 3const busca = Promise.reject("servidor indisponível"); busca.catch((erro) =&gt; { console.log("Aviso:", erro);
+});
+O que faz: espera várias Promises terminarem.Como entender: imagine várias tarefas acontecendo ao mesmo tempo, e você só continua depois que todas terminam.Explicação: é ótimo quando as tarefas são independentes.Exemplo 1const p1 = Promise.resolve("A");
 const p2 = Promise.resolve("B"); Promise.all([p1, p2]).then((resultado) =&gt; { console.log(resultado); // ["A", "B"]
 });
-Explicação: útil para ensinar concorrência e ganho de tempo em requisições independentes.O que faz: permite escrever código assíncrono com aparência mais próxima do código síncrono.async function buscarDados() { const resultado = await Promise.resolve("Dados prontos"); console.log(resultado);
-} buscarDados();
-Explicação: melhora a legibilidade e costuma ser a forma preferida em projetos modernos.O que faz: captura erros em blocos de código, inclusive com async/await.async function executar() { try { const resposta = await Promise.resolve("Sucesso"); console.log(resposta); } catch (erro) { console.log("Erro:", erro); }
+Exemplo 2const usuario = Promise.resolve({ nome: "Ana" });
+const pedidos = Promise.resolve([1, 2, 3]); Promise.all([usuario, pedidos]).then(([dadosUsuario, listaPedidos]) =&gt; { console.log(dadosUsuario, listaPedidos);
+});
+Exemplo 3const nota1 = Promise.resolve(8);
+const nota2 = Promise.resolve(9);
+const nota3 = Promise.resolve(7); Promise.all([nota1, nota2, nota3]).then((notas) =&gt; { console.log(notas); // [8, 9, 7]
+});
+O que faz: permite escrever código assíncrono de forma mais direta.Como entender: em vez de encaixar várias funções .then(), você escreve um fluxo mais próximo de passos normais.Explicação: melhora bastante a leitura do código.Exemplo 1async function carregarMensagem() { const mensagem = await Promise.resolve("dados prontos"); console.log(mensagem);
+} carregarMensagem();
+Exemplo 2async function dobrarValor() { const valor = await Promise.resolve(5); console.log(valor * 2); // 10
+} dobrarValor();
+Exemplo 3async function mostrarNome() { const nome = await Promise.resolve("Ana"); console.log(nome.toUpperCase()); // ANA
+} mostrarNome();
+O que faz: captura erros para o programa não quebrar sem controle.Como entender: é como colocar uma proteção ao redor de um trecho de código que pode falhar.Explicação: costuma aparecer muito junto com async/await.Exemplo 1try { throw new Error("algo deu errado");
+} catch (erro) { console.log(erro.message); // algo deu errado
 }
-Explicação: é essencial para ensinar robustez e tratamento de exceções.O que faz: permite extrair valores de arrays e objetos de forma mais simples.const usuario = { nome: "Ana", idade: 22 };
-const { nome, idade } = usuario; console.log(nome, idade);
-Explicação: apesar de não ser exatamente um método, é um recurso importante no nível avançado/intermediário.O que faz: espalha valores de arrays, objetos ou argumentos.const numeros = [1, 2, 3];
-const copia = [...numeros, 4, 5]; console.log(copia); // [1, 2, 3, 4, 5]
-Explicação: muito usado para cópias rasas, junção de dados e imutabilidade.Example
-Uma trilha didática possível: Strings: toUpperCase(), toLowerCase(), trim(), includes(), slice().
-Arrays básicos: push(), pop(), shift(), unshift(), indexOf().
-Repetição com arrays: forEach().
-Transformação e busca: map(), filter(), find().
-Validação e lógica: some(), every().
-Agregação e ordenação: reduce(), sort().
-Objetos: Object.keys(), Object.values(), Object.entries().
-Estruturas modernas: Set, Array.from(), desestruturação, spread.
-Assincronismo: Promise.then(), Promise.catch(), Promise.all(), async/await, try...catch. Mostre primeiro o valor original.
-Depois execute o método.
-Compare o resultado final.
-Destaque se o método altera ou não o valor original.
-Sempre mostre um caso real, como lista de alunos, notas, nomes ou produtos.
+Exemplo 2async function executar() { try { const resposta = await Promise.reject("falha"); console.log(resposta); } catch (erro) { console.log("Erro:", erro); }
+} executar();
+Exemplo 3try { const usuario = JSON.parse("texto invalido"); console.log(usuario);
+} catch (erro) { console.log("JSON inválido");
+}
+O que faz: espalha valores de arrays, objetos ou argumentos.Como entender: é uma forma prática de abrir uma estrutura e reaproveitar seu conteúdo.Explicação: muito usado em cópias rasas, junções e atualização de dados.Exemplo 1const numeros = [1, 2, 3];
+const copia = [...numeros, 4]; console.log(copia); // [1, 2, 3, 4]
+Exemplo 2const usuario = { nome: "Ana", idade: 30 };
+const atualizado = { ...usuario, idade: 31 }; console.log(atualizado); // { nome: "Ana", idade: 31 }
+Exemplo 3const grupo1 = ["Ana", "Bruno"];
+const grupo2 = ["Carla", "Diego"];
+const todos = [...grupo1, ...grupo2]; console.log(todos); // ["Ana", "Bruno", "Carla", "Diego"]
+O que faz: extrai dados de arrays e objetos de forma simples.Como entender: em vez de pegar item por item manualmente, você separa o que precisa de uma vez.Explicação: não é um método, mas é um recurso muito presente no JavaScript moderno.Exemplo 1const usuario = { nome: "Ana", idade: 30 };
+const { nome, idade } = usuario; console.log(nome, idade); // Ana 30
+Exemplo 2const numeros = [10, 20, 30];
+const [primeiro, segundo] = numeros; console.log(primeiro, segundo); // 10 20
+Exemplo 3const produto = { titulo: "Livro", preco: 50 };
+const { titulo } = produto; console.log(titulo); // Livro
+Example
+Uma boa ordem de estudo para o dia a dia: Comece pelos métodos de string.
+Depois avance para métodos de array.
+Em seguida pratique transformação de dados com map(), filter() e reduce().
+Depois trabalhe objetos com Object.keys() e Object.values().
+Por fim, entre em assincronismo com Promise, async/await e try...catch.
 Success
-Regra importante para aula: sempre diferencie métodos que retornam novo valor de métodos que alteram a estrutura original.
-]]></description><link>metodos-javascript-para-aulas.html</link><guid isPermaLink="false">Metodos-JavaScript-para-Aulas.md</guid><pubDate>Wed, 01 Apr 2026 12:40:49 GMT</pubDate></item></channel></rss>
+Ao ensinar, use sempre esta sequência:
+o que é -&gt; para que serve -&gt; como pensar -&gt; exemplos reais. Mostre primeiro o valor original.
+Depois aplique o método.
+Em seguida compare o antes e o depois.
+Destaque se o método altera ou não o valor original.
+Use exemplos comuns: nomes, listas, compras, notas, senhas, mensagens e produtos.
+]]></description><link>dicas-para-o-dia-a-dia.html</link><guid isPermaLink="false">dicas-para-o-dia-a-dia.md</guid><pubDate>Wed, 01 Apr 2026 13:19:04 GMT</pubDate></item></channel></rss>
